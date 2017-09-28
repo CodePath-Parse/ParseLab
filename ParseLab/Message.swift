@@ -14,6 +14,7 @@ class Message: PFObject, PFSubclassing {
     // @NSManaged to tell compiler these are dynamic properties
     // See https://stackoverflow.com/questions/31357564/what-does-nsmanaged-do
     @NSManaged var text: String?
+    @NSManaged var user: PFUser?
     
     // returns the Parse name that should be used
     class func parseClassName() -> String {

@@ -14,7 +14,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     @IBOutlet weak var chatTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
-
+    
     var client: ParseLiveQuery.Client!
     var subscription: Subscription<Message>!
 
@@ -27,6 +27,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         var messageQuery: PFQuery<Message> {
             return (Message.query()!
                 .whereKeyExists("text")
+                .includeKey("user")
             .order(byAscending: "createdAt")) as! PFQuery<Message>
         }
         client = ParseLiveQuery.Client()
@@ -42,6 +43,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func onSend(_ sender: Any) {
         let message = Message()
         message.text = chatTextField.text
+        message.user = PFUser.current()
         message.saveInBackground { (success, error) in
             if success {
                 print("message saved")

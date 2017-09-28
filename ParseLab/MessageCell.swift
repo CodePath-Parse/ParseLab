@@ -11,10 +11,17 @@ import UIKit
 class MessageCell: UITableViewCell {
 
     @IBOutlet weak var messageLabel: UILabel!
-
+    @IBOutlet weak var usernameLabel: UILabel!
+    
     var message: Message! {
         didSet {
             messageLabel.text = message.text
+            if let user = message.user {
+                usernameLabel.text = user.username
+                usernameLabel.isHidden = false
+            } else {
+                usernameLabel.isHidden = true
+            }
         }
     }
     override func awakeFromNib() {
