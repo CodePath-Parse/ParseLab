@@ -8,21 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		208F04651F7C94C900055774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208F04641F7C94C900055774 /* AppDelegate.swift */; };
-		208F04671F7C94C900055774 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208F04661F7C94C900055774 /* ViewController.swift */; };
 		208F046A1F7C94C900055774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208F04681F7C94C900055774 /* Main.storyboard */; };
 		208F046C1F7C94C900055774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 208F046B1F7C94C900055774 /* Assets.xcassets */; };
 		208F046F1F7C94C900055774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208F046D1F7C94C900055774 /* LaunchScreen.storyboard */; };
+		2E871DEB1F7C97790002F48B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E871DEA1F7C97790002F48B /* LoginViewController.swift */; };
 		FF728189132E7F2D0F8B1003 /* Pods_ParseLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B3C6256B56FE13928F683 /* Pods_ParseLab.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		208F04611F7C94C900055774 /* ParseLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParseLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		208F04641F7C94C900055774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		208F04661F7C94C900055774 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		208F04691F7C94C900055774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		208F046B1F7C94C900055774 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		208F046E1F7C94C900055774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		208F04701F7C94C900055774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E871DEA1F7C97790002F48B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		312B3C6256B56FE13928F683 /* Pods_ParseLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParseLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF4AF2D27EB94A438465C30 /* Pods-ParseLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseLab.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParseLab/Pods-ParseLab.release.xcconfig"; sourceTree = "<group>"; };
 		F29FF0FBC6A8179615B4AA64 /* Pods-ParseLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseLab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParseLab/Pods-ParseLab.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,8 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				208F04641F7C94C900055774 /* AppDelegate.swift */,
-				208F04661F7C94C900055774 /* ViewController.swift */,
 				208F04681F7C94C900055774 /* Main.storyboard */,
+				2E871DEA1F7C97790002F48B /* LoginViewController.swift */,
 				208F046B1F7C94C900055774 /* Assets.xcassets */,
 				208F046D1F7C94C900055774 /* LaunchScreen.storyboard */,
 				208F04701F7C94C900055774 /* Info.plist */,
@@ -219,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				208F04671F7C94C900055774 /* ViewController.swift in Sources */,
+				2E871DEB1F7C97790002F48B /* LoginViewController.swift in Sources */,
 				208F04651F7C94C900055774 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
