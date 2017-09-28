@@ -16,7 +16,7 @@ class MessageCell: UITableViewCell {
     var message: Message! {
         didSet {
             messageLabel.text = message.text
-            if let user = message.user {
+            if let user = try! message.user?.fetchIfNeeded() {
                 usernameLabel.text = user.username
                 usernameLabel.isHidden = false
             } else {
