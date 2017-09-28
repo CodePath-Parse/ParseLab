@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import Parse
+import ParseLiveQuery
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var chatTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+
+    var client: ParseLiveQuery.Client!
+    var subscription: Subscription<Message>!
 
     var messages: [Message] = [Message]()
 
@@ -19,7 +24,19 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        // Do any additional setup after loading the view.
+        var messageQuery: PFQuery<Message> {
+            return (Message.query()!
+                .whereKeyExists("text")
+            .order(byAscending: "createdAt")) as! PFQuery<Message>
+        }
+        client = ParseLiveQuery.Client()
+        subscription = client.subscribe(messageQuery)
+            .handle(Event.created) { (_, message) in
+                self.messages.append(message)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+        }
     }
 
     @IBAction func onSend(_ sender: Any) {

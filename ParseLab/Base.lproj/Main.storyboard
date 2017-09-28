@@ -119,17 +119,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23D-bC-xbr">
-                                                    <rect key="frame" x="0.0" y="0.0" width="367" height="43.5"/>
+                                                    <rect key="frame" x="18" y="18" width="331" height="7.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="23D-bC-xbr" firstAttribute="top" secondItem="PlQ-CU-V0X" secondAttribute="top" id="c7c-Rf-fTC"/>
-                                                <constraint firstAttribute="bottom" secondItem="23D-bC-xbr" secondAttribute="bottom" id="gUX-tV-bNd"/>
-                                                <constraint firstItem="23D-bC-xbr" firstAttribute="leading" secondItem="PlQ-CU-V0X" secondAttribute="leading" id="i7W-dE-bCe"/>
-                                                <constraint firstAttribute="trailing" secondItem="23D-bC-xbr" secondAttribute="trailing" id="zMD-qa-ZCM"/>
+                                                <constraint firstItem="23D-bC-xbr" firstAttribute="top" secondItem="PlQ-CU-V0X" secondAttribute="top" constant="18" id="c7c-Rf-fTC"/>
+                                                <constraint firstAttribute="bottom" secondItem="23D-bC-xbr" secondAttribute="bottom" constant="18" id="gUX-tV-bNd"/>
+                                                <constraint firstItem="23D-bC-xbr" firstAttribute="leading" secondItem="PlQ-CU-V0X" secondAttribute="leading" constant="18" id="i7W-dE-bCe"/>
+                                                <constraint firstAttribute="trailing" secondItem="23D-bC-xbr" secondAttribute="trailing" constant="18" id="zMD-qa-ZCM"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
