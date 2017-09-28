@@ -11,6 +11,8 @@
 		208F046A1F7C94C900055774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208F04681F7C94C900055774 /* Main.storyboard */; };
 		208F046C1F7C94C900055774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 208F046B1F7C94C900055774 /* Assets.xcassets */; };
 		208F046F1F7C94C900055774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208F046D1F7C94C900055774 /* LaunchScreen.storyboard */; };
+		20D2E0F41F7C99B60020815D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D2E0F31F7C99B60020815D /* ChatViewController.swift */; };
+		20D2E0F61F7C9D8A0020815D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D2E0F51F7C9D8A0020815D /* Message.swift */; };
 		2E871DEB1F7C97790002F48B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E871DEA1F7C97790002F48B /* LoginViewController.swift */; };
 		FF728189132E7F2D0F8B1003 /* Pods_ParseLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B3C6256B56FE13928F683 /* Pods_ParseLab.framework */; };
 /* End PBXBuildFile section */
@@ -22,6 +24,8 @@
 		208F046B1F7C94C900055774 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		208F046E1F7C94C900055774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		208F04701F7C94C900055774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20D2E0F31F7C99B60020815D /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		20D2E0F51F7C9D8A0020815D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		2E871DEA1F7C97790002F48B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		312B3C6256B56FE13928F683 /* Pods_ParseLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParseLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF4AF2D27EB94A438465C30 /* Pods-ParseLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseLab.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParseLab/Pods-ParseLab.release.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				208F046B1F7C94C900055774 /* Assets.xcassets */,
 				208F046D1F7C94C900055774 /* LaunchScreen.storyboard */,
 				208F04701F7C94C900055774 /* Info.plist */,
+				20D2E0F31F7C99B60020815D /* ChatViewController.swift */,
+				20D2E0F51F7C9D8A0020815D /* Message.swift */,
 			);
 			path = ParseLab;
 			sourceTree = "<group>";
@@ -220,6 +226,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E871DEB1F7C97790002F48B /* LoginViewController.swift in Sources */,
+				20D2E0F61F7C9D8A0020815D /* Message.swift in Sources */,
+				20D2E0F41F7C99B60020815D /* ChatViewController.swift in Sources */,
 				208F04651F7C94C900055774 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

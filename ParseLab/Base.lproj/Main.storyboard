@@ -75,11 +75,75 @@
                     <connections>
                         <outlet property="emailTextField" destination="GHt-mJ-sCf" id="yw1-X2-7nm"/>
                         <outlet property="passwordTextField" destination="tjA-g5-gpM" id="sqk-Ap-GeS"/>
+                        <segue destination="MHl-Ji-6MW" kind="presentation" identifier="ChatViewControllerSegue" id="FGD-za-uHm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="evW-4V-cVK">
+            <objects>
+                <viewController id="b5L-TX-VBA" customClass="ChatViewController" customModule="ParseLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S0d-7K-5k6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fr0-hm-FQ4">
+                                <rect key="frame" x="4" y="82" width="323" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jWN-cj-oZB"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="323" id="nRz-Gs-YlN"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kro-hC-8jH">
+                                <rect key="frame" x="335" y="82" width="36" height="30"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="onSend:" destination="b5L-TX-VBA" eventType="touchUpInside" id="GR7-je-JcL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fr0-hm-FQ4" firstAttribute="leading" secondItem="eDa-b1-Jai" secondAttribute="leading" constant="4" id="2Dy-M1-uDx"/>
+                            <constraint firstItem="kro-hC-8jH" firstAttribute="centerY" secondItem="Fr0-hm-FQ4" secondAttribute="centerY" id="6k2-o5-Zbo"/>
+                            <constraint firstItem="kro-hC-8jH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Fr0-hm-FQ4" secondAttribute="trailing" constant="4" id="9bP-V7-6nn"/>
+                            <constraint firstItem="eDa-b1-Jai" firstAttribute="trailing" secondItem="kro-hC-8jH" secondAttribute="trailing" constant="4" id="DvL-K3-Cve"/>
+                            <constraint firstItem="Fr0-hm-FQ4" firstAttribute="top" secondItem="eDa-b1-Jai" secondAttribute="top" constant="18" id="z0I-dF-yEv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eDa-b1-Jai"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chat" id="btM-S9-5Nq"/>
+                    <connections>
+                        <outlet property="chatTextField" destination="Fr0-hm-FQ4" id="6rO-RD-V2E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KdH-zI-eea" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1416.8" y="31.934032983508249"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ExR-Fo-puV">
+            <objects>
+                <navigationController storyboardIdentifier="ChatNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="MHl-Ji-6MW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kES-yj-4NO">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="b5L-TX-VBA" kind="relationship" relationship="rootViewController" id="B6n-hx-sCb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TlL-k2-Aqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="716" y="32"/>
         </scene>
     </scenes>
 </document>
