@@ -8,12 +8,17 @@
 
 import UIKit
 
-class ChatViewController: UIViewController {
+class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var chatTextField: UITextField!
+    @IBOutlet weak var tableView: UITableView!
+
+    var messages: [Message] = [Message]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.delegate = self
+        tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
 
@@ -24,9 +29,21 @@ class ChatViewController: UIViewController {
             if success {
                 print("message saved")
             } else {
-                print(error?.localizedDescription)
+                print(error?.localizedDescription ?? "")
             }
         }
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath) as? MessageCell {
+            cell.message = messages[indexPath.row]
+            return cell
+        }
+        return UITableViewCell()
     }
     
     override func didReceiveMemoryWarning() {

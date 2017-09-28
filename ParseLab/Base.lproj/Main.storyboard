@@ -107,13 +107,48 @@
                                     <action selector="onSend:" destination="b5L-TX-VBA" eventType="touchUpInside" id="GR7-je-JcL"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="anq-oa-mQ8">
+                                <rect key="frame" x="4" y="130" width="367" height="533"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" id="uN5-Ot-hzn" customClass="MessageCell" customModule="ParseLab" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="367" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uN5-Ot-hzn" id="PlQ-CU-V0X">
+                                            <rect key="frame" x="0.0" y="0.0" width="367" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23D-bC-xbr">
+                                                    <rect key="frame" x="0.0" y="0.0" width="367" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="23D-bC-xbr" firstAttribute="top" secondItem="PlQ-CU-V0X" secondAttribute="top" id="c7c-Rf-fTC"/>
+                                                <constraint firstAttribute="bottom" secondItem="23D-bC-xbr" secondAttribute="bottom" id="gUX-tV-bNd"/>
+                                                <constraint firstItem="23D-bC-xbr" firstAttribute="leading" secondItem="PlQ-CU-V0X" secondAttribute="leading" id="i7W-dE-bCe"/>
+                                                <constraint firstAttribute="trailing" secondItem="23D-bC-xbr" secondAttribute="trailing" id="zMD-qa-ZCM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="messageLabel" destination="23D-bC-xbr" id="K8S-QC-Ipx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Fr0-hm-FQ4" firstAttribute="leading" secondItem="eDa-b1-Jai" secondAttribute="leading" constant="4" id="2Dy-M1-uDx"/>
+                            <constraint firstItem="eDa-b1-Jai" firstAttribute="trailing" secondItem="anq-oa-mQ8" secondAttribute="trailing" constant="4" id="6cg-4h-PY9"/>
                             <constraint firstItem="kro-hC-8jH" firstAttribute="centerY" secondItem="Fr0-hm-FQ4" secondAttribute="centerY" id="6k2-o5-Zbo"/>
                             <constraint firstItem="kro-hC-8jH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Fr0-hm-FQ4" secondAttribute="trailing" constant="4" id="9bP-V7-6nn"/>
                             <constraint firstItem="eDa-b1-Jai" firstAttribute="trailing" secondItem="kro-hC-8jH" secondAttribute="trailing" constant="4" id="DvL-K3-Cve"/>
+                            <constraint firstItem="anq-oa-mQ8" firstAttribute="top" secondItem="Fr0-hm-FQ4" secondAttribute="bottom" constant="18" id="JsU-m8-byB"/>
+                            <constraint firstItem="eDa-b1-Jai" firstAttribute="bottom" secondItem="anq-oa-mQ8" secondAttribute="bottom" constant="4" id="bVS-wW-TR5"/>
+                            <constraint firstItem="anq-oa-mQ8" firstAttribute="leading" secondItem="eDa-b1-Jai" secondAttribute="leading" constant="4" id="g8T-8h-qkM"/>
                             <constraint firstItem="Fr0-hm-FQ4" firstAttribute="top" secondItem="eDa-b1-Jai" secondAttribute="top" constant="18" id="z0I-dF-yEv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eDa-b1-Jai"/>
@@ -121,6 +156,7 @@
                     <navigationItem key="navigationItem" title="Chat" id="btM-S9-5Nq"/>
                     <connections>
                         <outlet property="chatTextField" destination="Fr0-hm-FQ4" id="6rO-RD-V2E"/>
+                        <outlet property="tableView" destination="anq-oa-mQ8" id="MjB-3f-0dj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KdH-zI-eea" userLabel="First Responder" sceneMemberID="firstResponder"/>

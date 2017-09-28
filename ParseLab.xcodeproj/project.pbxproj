@@ -14,6 +14,7 @@
 		20D2E0F41F7C99B60020815D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D2E0F31F7C99B60020815D /* ChatViewController.swift */; };
 		20D2E0F61F7C9D8A0020815D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D2E0F51F7C9D8A0020815D /* Message.swift */; };
 		2E871DEB1F7C97790002F48B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E871DEA1F7C97790002F48B /* LoginViewController.swift */; };
+		2E871DED1F7C9FC00002F48B /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E871DEC1F7C9FC00002F48B /* MessageCell.swift */; };
 		FF728189132E7F2D0F8B1003 /* Pods_ParseLab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B3C6256B56FE13928F683 /* Pods_ParseLab.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		20D2E0F31F7C99B60020815D /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		20D2E0F51F7C9D8A0020815D /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		2E871DEA1F7C97790002F48B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2E871DEC1F7C9FC00002F48B /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		312B3C6256B56FE13928F683 /* Pods_ParseLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParseLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EF4AF2D27EB94A438465C30 /* Pods-ParseLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseLab.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParseLab/Pods-ParseLab.release.xcconfig"; sourceTree = "<group>"; };
 		F29FF0FBC6A8179615B4AA64 /* Pods-ParseLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParseLab.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParseLab/Pods-ParseLab.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		208F04631F7C94C900055774 /* ParseLab */ = {
 			isa = PBXGroup;
 			children = (
+				2E871DEC1F7C9FC00002F48B /* MessageCell.swift */,
 				208F04641F7C94C900055774 /* AppDelegate.swift */,
 				208F04681F7C94C900055774 /* Main.storyboard */,
 				2E871DEA1F7C97790002F48B /* LoginViewController.swift */,
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E871DEB1F7C97790002F48B /* LoginViewController.swift in Sources */,
+				2E871DED1F7C9FC00002F48B /* MessageCell.swift in Sources */,
 				20D2E0F61F7C9D8A0020815D /* Message.swift in Sources */,
 				20D2E0F41F7C99B60020815D /* ChatViewController.swift in Sources */,
 				208F04651F7C94C900055774 /* AppDelegate.swift in Sources */,
